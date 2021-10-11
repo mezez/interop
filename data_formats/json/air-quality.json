@@ -1,0 +1,46 @@
+{
+  "title": "Shangai Air Quality 10/10/2021",
+  "day": "10th October 2021",
+  "indices": [
+    {
+      "name": "PM2.5",
+      "value": "42"
+    },
+    {
+      "name": "PM10",
+      "value": "40"
+    },
+    {
+      "name": "O3",
+      "value": "24"
+    },
+    {
+      "name": "NO2",
+      "value": "8"
+    },
+    {
+      "name": "SO2",
+      "value": "1"
+    },
+    {
+      "name": "CO",
+      "value": "6"
+    },
+    {
+      "name": "Temp",
+      "value": "31"
+    },
+    {
+      "name": "Pressure",
+      "value": "1003"
+    },
+    {
+      "name": "Humidity",
+      "value": "73"
+    },
+    {
+      "name": "Wind",
+      "value": "1"
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<musicBrain>
+    <overview>
+        <tracklist>
+            <Vinyl1>
+                <info>
+                    <number>A1</number>
+                    <titleDetails>
+                        <title>La Vie en rose</title>
+                        <vocals>Nil</vocals>
+                        <conductor>Nil</conductor>
+                        <recordingOf>La view en rose(French original</recordingOf>
+                        <lyricist>Edit Piaf</lyricist>
+                        <composer>Louiguy and Edith Piaf</composer>
+                        <translator>Nil</translator>
+                        <translatedVersionOf>Nil</translatedVersionOf>
+                        <publisher>Editions Beuscher Arpege and ピアーミュージック (Japan, subsidiary of Nichion)</publisher>
+                        <versionOf>Nil</versionOf>
+                    </titleDetails>
+                    <artist>Edith Piaf</artist>
+                    <rating>Nil</rating>
+                    <Length>3:02</Length>
+                </info>
+                <info>
+                    <number>A2</number>
+                    <titleDetails>
+                        <title>Hymne a l'amour</title>
+                        <vocals>Nil</vocals>
+                        <conductor>Nil</conductor>
+                        <recordingOf>Hymne a l'amour</recordingOf>
+                        <lyricist>Edit Piaf</lyricist>
+                        <composer>Marguerite Monnot</composer>
+                        <translator>Nil</translator>
+                        <translatedVersionOf>Nil</translatedVersionOf>
+                        <publisher>Nil</publisher>
+                        <versionOf>Nil</versionOf>
+                    </titleDetails>
+                    <artist>Edith Piaf</artist>
+                    <rating>Nil</rating>
+                    <Length>3:23</Length>
+                </info>
+                <info>
+                    <number>A3</number>
+                    <titleDetails>
+                        <title>J'm'en fous pas mal</title>
+                        <vocals>Edith Piaf</vocals>
+                        <conductor>Guy Luypaerts (on 1946-10-09)</conductor>
+                        <recordingOf>J'm'en fous pas mal (on 1946-10-09)</recordingOf>
+                        <lyricist>Michael Emer</lyricist>
+                        <composer>Michael Emer</composer>
+                        <translator>Nil</translator>
+                        <translatedVersionOf>Nil</translatedVersionOf>
+                        <publisher>Nil</publisher>
+                        <versionOf>Nil</versionOf>
+                    </titleDetails>
+                    <artist>Edith Piaf</artist>
+                    <rating>Nil</rating>
+                    <Length>2:09</Length>
+                </info>
+                <info>
+                    <number>A4</number>
+                    <titleDetails>
+                        <title>Johnny, tu n’es pas un ange</title>
+                        <vocals>Edith Piaf</vocals>
+                        <conductor>Robert Chauvigny</conductor>
+                        <recordingOf>Johnny, tu n'es pas un ange (on 1953-12-24)</recordingOf>
+                        <lyricist>Liviu Deleanu, Paddy Roberts (singer/songwriter) and Marcel Stellman</lyricist>
+                        <composer>Les Paul and Richard Stein</composer>
+                        <translator>Francis Lemarque</translator>
+                        <translatedVersionOf>Johnny (Is the Boy for Me)</translatedVersionOf>
+                        <publisher>Nil</publisher>
+                        <versionOf>Nil</versionOf>
+                    </titleDetails>
+                    <artist>Edith Piaf</artist>
+                    <rating>Nil</rating>
+                    <Length>3:23</Length>
+                </info>
+                <info>
+                    <number>A5</number>
+                    <titleDetails>
+                        <title>Bravo pour le clown !</title>
+                        <vocals>Nil</vocals>
+                        <conductor>Nil</conductor>
+                        <recordingOf>Bravo pour le clown !</recordingOf>
+                        <lyricist>Henri Contet</lyricist>
+                        <composer>Louiguy</composer>
+                        <translator>Nil</translator>
+                        <translatedVersionOf>Nil</translatedVersionOf>
+                        <publisher>Nil</publisher>
+                        <versionOf>Nil</versionOf>
+                    </titleDetails>
+                    <artist>Edith Piaf</artist>
+                    <rating>Nil</rating>
+                    <Length>3:34</Length>
+                </info>
+                <info>
+                    <number>A6</number>
+                    <titleDetails>
+                        <title>L’Accordéoniste</title>
+                        <vocals>Nil</vocals>
+                        <conductor>Nil</conductor>
+                        <recordingOf>L’Accordéoniste</recordingOf>
+                        <lyricist>Michael Emer</lyricist>
+                        <composer>Michael Emer</composer>
+                        <translator>Nil</translator>
+                        <translatedVersionOf>Nil</translatedVersionOf>
+                        <publisher>Nil</publisher>
+                        <versionOf>Nil</versionOf>
+                    </titleDetails>
+                    <artist>Edith Piaf</artist>
+                    <rating>Nil</rating>
+                    <Length>3:02</Length>
+                </info>
+                <info>
+                    <number>A7</number>
+                    <titleDetails>
+                        <title>L’Homme à la moto</title>
+                        <vocals>Edit Piaf</vocals>
+                        <conductor>Nil</conductor>
+                        <recordingOf>L’Homme à la moto</recordingOf>
+                        <lyricist>Jerry Leiber</lyricist>
+                        <composer>Jerry Leiber</composer>
+                        <translator>Jean Dréjac</translator>
+                        <translatedVersionOf>Black Denim Trousers and Motorcycle Boots</translatedVersionOf>
+                        <publisher>Nil</publisher>
+                        <versionOf>Nil</versionOf>
+                    </titleDetails>
+                    <artist>Edith Piaf</artist>
+                    <rating>Nil</rating>
+                    <Length>3:02</Length>
+                </info>
+                <info>
+                    <number>B1</number>
+                    <titleDetails>
+                        <title>La Foule</title>
+                        <vocals>Nil</vocals>
+                        <conductor>Nil</conductor>
+                        <recordingOf>La Foule</recordingOf>
+                        <lyricist>Michel Rivgauche</lyricist>
+                        <composer>Ángel Cabral (in 1936)</composer>
+                        <translator>Jean Dréjac</translator>
+                        <translatedVersionOf>Black Denim Trousers and Motorcycle Boots</translatedVersionOf>
+                        <publisher>Ángel Cabral (in 1936)</publisher>
+                        <versionOf>Que nadie sepa mi sufrir</versionOf>
+                    </titleDetails>
+                    <artist>Edith Piaf</artist>
+                    <rating>Nil</rating>
+                    <Length>2:57</Length>
+                </info>
+                <info>
+                    <number>B2</number>
+                    <titleDetails>
+                        <title>Mon manège a moi (Tu me fais tourner la tête)</title>
+                        <vocals>Edith Piaf</vocals>
+                        <conductor>Nil</conductor>
+                        <recordingOf>Mon manège a moi (Tu me fais tourner la tête)</recordingOf>
+                        <lyricist>Jean Constantin</lyricist>
+                        <composer>Norbert Glanzberg</composer>
+                        <translator>Nil</translator>
+                        <translatedVersionOf>Nil</translatedVersionOf>
+                        <publisher>Nil</publisher>
+                        <versionOf>Nil</versionOf>
+                    </titleDetails>
+                    <artist>Edith Piaf</artist>
+                    <rating>Nil</rating>
+                    <Length>2:57</Length>
+                </info>
+                <info>
+                    <number>B3</number>
+                    <titleDetails>
+                        <title>Milord</title>
+                        <vocals>Edith Piaf (on 1959-06-05)</vocals>
+                        <conductor>Robert Chauvigny (on 1959-06-05)</conductor>
+                        <recordingOf>Milord (on 1959-06-05)</recordingOf>
+                        <lyricist>Georges Moustaki</lyricist>
+                        <composer>Marguerite Monnot</composer>
+                        <translator>Nil</translator>
+                        <translatedVersionOf>Nil</translatedVersionOf>
+                        <publisher>Nil</publisher>
+                        <versionOf>Nil</versionOf>
+                    </titleDetails>
+                    <artist>Edith Piaf</artist>
+                    <rating>4 Stars</rating>
+                    <Length>4:27</Length>
+                </info>
+                <info>
+                    <number>B4</number>
+                    <titleDetails>
+                        <title>Non, je ne regrette rien</title>
+                        <vocals>Edith Piaf (on 1960-11-10)</vocals>
+                        <conductor>Robert Chauvigny (on 1960-11-10)</conductor>
+                        <recordingOf>Non, je ne regrette rien (on 1960-11-10)</recordingOf>
+                        <lyricist>Michel Vaucaire</lyricist>
+                        <composer>Charles Dumont</composer>
+                        <translator>Nil</translator>
+                        <translatedVersionOf>Nil</translatedVersionOf>
+                        <publisher>Nil</publisher>
+                        <versionOf>Nil</versionOf>
+                    </titleDetails>
+                    <artist>Edith Piaf</artist>
+                    <rating>5 Stars</rating>
+                    <Length>2:23</Length>
+                </info>
+                <info>
+                    <number>B5</number>
+                    <titleDetails>
+                        <title>Les Mots d’amour</title>
+                        <vocals>Nil</vocals>
+                        <conductor>Nil</conductor>
+                        <recordingOf>Les Mots d’amour</recordingOf>
+                        <lyricist>Michel Rivgauche</lyricist>
+                        <composer>Charles Dumont</composer>
+                        <translator>Nil</translator>
+                        <translatedVersionOf>Nil</translatedVersionOf>
+                        <publisher>Nil</publisher>
+                        <versionOf>Nil</versionOf>
+                    </titleDetails>
+                    <artist>Edith Piaf</artist>
+                    <rating>Nil</rating>
+                    <Length>3:24</Length>
+                </info>
+                <info>
+                    <number>B6</number>
+                    <titleDetails>
+                        <title>Mon Dieu</title>
+                        <vocals>Nil</vocals>
+                        <conductor>Nil</conductor>
+                        <recordingOf>Mon Dieu</recordingOf>
+                        <lyricist>Michel Vaucaire</lyricist>
+                        <composer>Charles Dumont</composer>
+                        <translator>Nil</translator>
+                        <translatedVersionOf>Nil</translatedVersionOf>
+                        <publisher>Nil</publisher>
+                        <versionOf>Nil</versionOf>
+                    </titleDetails>
+                    <artist>Edith Piaf</artist>
+                    <rating>Nil</rating>
+                    <Length>3:20</Length>
+                </info>
+                <info>
+                    <number>B7</number>
+                    <titleDetails>
+                        <title>À quoi ça sert l’amour</title>
+                        <vocals>Édith Piaf (on 1962-09-03) and Théo Sarapo (on 1962-09-03)</vocals>
+                        <conductor>Jean Leccia (on 1962-09-03)</conductor>
+                        <recordingOf>À quoi ça sert l’amour (on 1962-09-03)</recordingOf>
+                        <lyricist>Michel Emer</lyricist>
+                        <composer>Michel Emer</composer>
+                        <translator>Nil</translator>
+                        <translatedVersionOf>Nil</translatedVersionOf>
+                        <publisher>Nil</publisher>
+                        <versionOf>Nil</versionOf>
+                    </titleDetails>
+                    <artist>Edith Piaf</artist>
+                    <rating>Nil</rating>
+                    <Length>2:25</Length>
+                </info>
+            </Vinyl1>
+        </tracklist>
+        <credits>
+            <release>
+                <discogs>https://www.discogs.com/release/900183</discogs>
+            </release>
+            <releaseGroup>
+                <discogs>https://www.discogs.com/master/215818</discogs>
+            </releaseGroup>
+        </credits>
+    </overview>
+</musicBrain>
