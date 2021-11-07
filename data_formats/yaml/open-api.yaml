@@ -1,0 +1,89 @@
+product: smarthomeapi
+version: 3.0.0
+info:
+  title: Smart Home API
+  description: An API for the interopability smart home
+  version: 1.0.0
+servers:
+  - url: http://api.example.com/v1
+    description: production api
+  - url: http://staging.api.example.com
+    description: Internal staging server
+paths:
+  #read (GET) the resource associated to a Smart Home to get the list of rooms
+  /rooms:
+    get:
+      summary: Returns a list of rooms in a smart home
+      description: Use this endpoint to retrieve all the rooms in a smart home
+      responses:
+        '200':
+          description: A JSON array of rooms
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+        '404':
+          description: No records found
+        '500':
+          description: Internal server error
+
+  #read (GET) the resource associated to a room (the id is a URL parameter) to get the list of connected devices it contains. Focus on two types of devices: color light bulbs, and smart TVs.
+  /rooms/view/[id]:
+    get:
+      summary: Returns details about a specific room
+      description: Use this endpoint with a room id to get the details of the corresponding room
+      responses:
+        '200':
+          description: A JSON object containing room information
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  type: string
+        '404':
+          description: No record found
+        '500':
+          description: Internal server error
+
+  #read (GET) the resource associated to a connected device (the id of the room and the id of the connected device are URL parameters) to obtain the current status of the device.
+  /rooms/connected-device-info[room-id]/[device-id]:
+    get:
+      summary: Returns info about the connected device of a specific room
+      description: Use this endpoint to get the status of the connected device in a specific room using the room id and device id
+      responses:
+        '200':
+          description: A JSON object of devices status of a room
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  type: string
+        '404':
+          description: No record found
+        '500':
+          description: Internal server error
+
+    #update (PUT) the resource associated to a connected device (same path as before) to change the status of the device.
+    /rooms/connected-device-info[room-id]/[device-id]:
+      put:
+        summary: Change connected device status
+        description: Use this endpoint to update the status of the connected device in a specific room using the room id and device id
+        responses:
+          '200':
+            description: Update success
+            content:
+              application/json:
+                schema:
+                  type: object
+                  items:
+                    type: string
+          '404':
+            description: No record found to update
+          '500':
+            description: Internal server error
+
+
