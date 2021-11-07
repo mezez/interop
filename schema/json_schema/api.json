@@ -1,0 +1,240 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome5",
+  "definitions": {
+    "Welcome5": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "product": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "info": {
+          "$ref": "#/definitions/Info"
+        },
+        "servers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Server"
+          }
+        },
+        "paths": {
+          "$ref": "#/definitions/Paths"
+        }
+      },
+      "required": [
+        "info",
+        "paths",
+        "product",
+        "servers",
+        "version"
+      ],
+      "title": "Welcome5"
+    },
+    "Info": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "description",
+        "title",
+        "version"
+      ],
+      "title": "Info"
+    },
+    "Paths": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "/rooms": {
+          "$ref": "#/definitions/Rooms"
+        },
+        "/rooms/view/[id]": {
+          "$ref": "#/definitions/Rooms"
+        },
+        "/rooms/connected-device-info[room-id]/[device-id]": {
+          "$ref": "#/definitions/PathsRoomsConnectedDeviceInfoRoomIDDeviceID"
+        }
+      },
+      "required": [
+        "/rooms",
+        "/rooms/connected-device-info[room-id]/[device-id]",
+        "/rooms/view/[id]"
+      ],
+      "title": "Paths"
+    },
+    "Rooms": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "get": {
+          "$ref": "#/definitions/Get"
+        }
+      },
+      "required": [
+        "get"
+      ],
+      "title": "Rooms"
+    },
+    "Get": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "responses": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/Response"
+          }
+        }
+      },
+      "required": [
+        "description",
+        "responses",
+        "summary"
+      ],
+      "title": "Get"
+    },
+    "Response": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "content": {
+          "$ref": "#/definitions/Content"
+        }
+      },
+      "required": [
+        "description"
+      ],
+      "title": "Response"
+    },
+    "Content": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "application/json": {
+          "$ref": "#/definitions/ApplicationJSON"
+        }
+      },
+      "required": [
+        "application/json"
+      ],
+      "title": "Content"
+    },
+    "ApplicationJSON": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema": {
+          "$ref": "#/definitions/Schema"
+        }
+      },
+      "required": [
+        "schema"
+      ],
+      "title": "ApplicationJSON"
+    },
+    "Schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "items": {
+          "$ref": "#/definitions/Items"
+        }
+      },
+      "required": [
+        "items",
+        "type"
+      ],
+      "title": "Schema"
+    },
+    "Items": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "title": "Items"
+    },
+    "PathsRoomsConnectedDeviceInfoRoomIDDeviceID": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "get": {
+          "$ref": "#/definitions/Get"
+        },
+        "/rooms/connected-device-info[room-id]/[device-id]": {
+          "$ref": "#/definitions/RoomsConnectedDeviceInfoRoomIDDeviceIDRoomsConnectedDeviceInfoRoomIDDeviceID"
+        }
+      },
+      "required": [
+        "/rooms/connected-device-info[room-id]/[device-id]",
+        "get"
+      ],
+      "title": "PathsRoomsConnectedDeviceInfoRoomIDDeviceID"
+    },
+    "RoomsConnectedDeviceInfoRoomIDDeviceIDRoomsConnectedDeviceInfoRoomIDDeviceID": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "put": {
+          "$ref": "#/definitions/Get"
+        }
+      },
+      "required": [
+        "put"
+      ],
+      "title": "RoomsConnectedDeviceInfoRoomIDDeviceIDRoomsConnectedDeviceInfoRoomIDDeviceID"
+    },
+    "Server": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": [
+            "http"
+          ]
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "description",
+        "url"
+      ],
+      "title": "Server"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+Some json paths for the Dune movie at https://ci.mines-stetienne.fr/cps2/interop/dune.json
+validated at http://jsonpath.com/
+
+$.genre[1]
+$.aggregateRating.ratingCount
+$.trailer.thumbnail.contentUrl
+$.actor[1].name
+
+Questions
+What is the rating value of the movie?
+path: $.aggregateRating.ratingValue
+
+What is the IMDB identifier for Rebecca Ferguson?
+path: $.actor[1] //actor/person
+
+Who rated the film with only 1 star
+path: $.reviews[2].author.name
