@@ -4,32 +4,33 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit66502aa9ce44ebe3c61c3f6c83c58ea2
+class ComposerStaticInit6bfd1124d1a990868bce64aa013d59e3
 {
     public static $prefixLengthsPsr4 = array (
-        'B' => 
+        'P' => 
         array (
-            'Box\\Spout\\' => 10,
+            'PHPModelGenerator\\' => 18,
+            'PHPMicroTemplate\\' => 17,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Box\\Spout\\' => 
+        'PHPModelGenerator\\' => 
         array (
-            0 => __DIR__ . '/..' . '/box/spout/src/Spout',
+            0 => __DIR__ . '/..' . '/wol-soft/php-json-schema-model-generator/src',
+            1 => __DIR__ . '/..' . '/wol-soft/php-json-schema-model-generator-production/src',
         ),
-    );
-
-    public static $classMap = array (
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'PHPMicroTemplate\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wol-soft/php-micro-template/src',
+        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit66502aa9ce44ebe3c61c3f6c83c58ea2::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit66502aa9ce44ebe3c61c3f6c83c58ea2::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit66502aa9ce44ebe3c61c3f6c83c58ea2::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit6bfd1124d1a990868bce64aa013d59e3::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit6bfd1124d1a990868bce64aa013d59e3::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

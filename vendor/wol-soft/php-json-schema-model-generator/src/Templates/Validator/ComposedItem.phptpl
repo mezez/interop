@@ -1,0 +1,129 @@
+{% if onlyForDefinedValues %}
+    $value !== null &&
+{% endif %}
+(function (&$value) use (
+    &$modelData,
+    &$modifiedModelData,
+    &$compositionErrorCollection,
+    &$succeededCompositionElements,
+    &$validatorIndex
+) {
+    $succeededCompositionElements = {{ availableAmount }};
+    $validatorComponentIndex = 0;
+    $originalModelData = $value;
+    $originalPropertyValidationState = $this->_propertyValidationState ?? [];
+    $proposedValue = null;
+
+    {% if generatorConfiguration.collectErrors() %}
+        $originalErrorRegistry = $this->_errorRegistry;
+    {% endif %}
+
+    {% foreach compositionProperties as compositionProperty %}
+        try {
+            // check if the state of the validator is already known.
+            // If none of the properties affected by the validator are changed the validator must not be re-evaluated
+            if (isset($validatorIndex) &&
+                isset($this->_propertyValidationState[$validatorIndex][$validatorComponentIndex]) &&
+                !array_intersect(
+                    array_keys($modifiedModelData),
+                    [
+                        {% foreach compositionProperty.getAffectedObjectProperties() as affectedObjectProperty %}
+                            '{{ affectedObjectProperty.getName() }}',
+                        {% endforeach %}
+                    ]
+                )
+            ) {
+                {% if generatorConfiguration.collectErrors() %}
+                    $compositionErrorCollection[] = $this->_propertyValidationState[$validatorIndex][$validatorComponentIndex];
+                {% endif %}
+
+                if ({% if generatorConfiguration.collectErrors() %}
+                        $this->_propertyValidationState[$validatorIndex][$validatorComponentIndex]->getErrors()
+                    {% else %}
+                        $this->_propertyValidationState[$validatorIndex][$validatorComponentIndex] !== true
+                    {% endif %}
+                ) {
+                    throw new \Exception();
+                }
+            } else {
+                {% if generatorConfiguration.collectErrors() %}
+                    // collect errors for each composition element
+                    $this->_errorRegistry = new {{ viewHelper.getSimpleClassName(generatorConfiguration.getErrorRegistryClass()) }}();
+                {% endif %}
+
+                {% if not postPropose %}
+                    $proposedValue = $proposedValue ?? $value;
+                {% endif %}
+
+                {{ viewHelper.resolvePropertyDecorator(compositionProperty) }}
+
+                {% foreach compositionProperty.getOrderedValidators() as validator %}
+                    {{ validator.getValidatorSetUp() }}
+                    if ({{ validator.getCheck() }}) {
+                        {{ viewHelper.validationError(validator) }}
+                    }
+                {% endforeach %}
+
+                {% if generatorConfiguration.collectErrors() %}
+                    $compositionErrorCollection[] = $this->_errorRegistry;
+                    if (isset($validatorIndex)) {
+                        $this->_propertyValidationState[$validatorIndex][$validatorComponentIndex] = $this->_errorRegistry;
+                    }
+
+                    // an error inside the composed validation occurred. Throw an exception to count the validity of the
+                    // composition item
+                    if ($this->_errorRegistry->getErrors()) {
+                        throw new \Exception();
+                    }
+                {% endif %}
+
+                {% if postPropose %}
+                    $proposedValue = $proposedValue ?? $value;
+                {% endif %}
+
+                {% if not generatorConfiguration.collectErrors() %}
+                    if (isset($validatorIndex)) {
+                        $this->_propertyValidationState[$validatorIndex][$validatorComponentIndex] = true;
+                    }
+                {% endif %}
+            }
+        } catch (\Exception $e) {
+            {% if not generatorConfiguration.collectErrors() %}
+                if (isset($validatorIndex)) {
+                    $this->_propertyValidationState[$validatorIndex][$validatorComponentIndex] = false;
+                }
+            {% endif %}
+
+            {% foreach compositionProperty.getAffectedObjectProperties() as affectedObjectProperty %}
+                $modelData['{{ affectedObjectProperty.getName() }}'] = null;
+            {% endforeach %}
+
+            $succeededCompositionElements--;
+        }
+
+        $value = $originalModelData;
+        $validatorComponentIndex++;
+    {% endforeach %}
+
+    {% if mergedProperty %}
+        if (is_object($proposedValue)) {
+            {{ viewHelper.resolvePropertyDecorator(mergedProperty) }}
+        } else {
+            $value = $proposedValue;
+        }
+    {% else %}
+        $value = $proposedValue;
+    {% endif %}
+
+    {% if generatorConfiguration.collectErrors() %}
+        $this->_errorRegistry = $originalErrorRegistry;
+    {% endif %}
+
+    $result = !({{ composedValueValidation }});
+
+    if ($result) {
+        $this->_propertyValidationState = $originalPropertyValidationState;
+    }
+
+    return $result;
+})($value)

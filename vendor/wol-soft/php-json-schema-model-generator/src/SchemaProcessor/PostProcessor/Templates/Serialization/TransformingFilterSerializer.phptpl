@@ -1,0 +1,7 @@
+/**
+ * serialize the property {{ property }}
+ */
+protected function serialize{{ viewHelper.ucfirst(property) }}()
+{
+    return \{{ serializerClass }}::{{ serializerMethod }}($this->{{ property }}, {{ serializerOptions }});
+}

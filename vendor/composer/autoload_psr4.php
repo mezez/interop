@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Box\\Spout\\' => array($vendorDir . '/box/spout/src/Spout'),
+    'PHPModelGenerator\\' => array($vendorDir . '/wol-soft/php-json-schema-model-generator/src', $vendorDir . '/wol-soft/php-json-schema-model-generator-production/src'),
+    'PHPMicroTemplate\\' => array($vendorDir . '/wol-soft/php-micro-template/src'),
 );

@@ -1,7 +1,5 @@
 <?php
 
-//use Box\Spout\Reader\Common\Creator\ReaderEntityFactory;
-//require_once 'box/spout/src/Spout/Reader/Common/Creator/ReaderEntityFactory.php';
 
 use Box\Spout\Reader\ReaderFactory;
 use Box\Spout\Writer\WriterFactory;
@@ -11,8 +9,6 @@ use Box\Spout\Writer\Style\Color;
 
 require_once './phpoffice/phpspreadsheet/src/PhpSpreadsheet/IOFactory.php';
 require_once './phpoffice/phpspreadsheet/src/PhpSpreadsheet/Spreadsheet.php';
-//use PhpOffice\PhpSpreadsheet\IOFactory;
-//use PhpOffice\PhpSpreadsheet\Spreadsheet;
 
 parseExcelFile();
 

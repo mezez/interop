@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "stringProperty": {
+      "const": "MyConstValue"
+    },
+    "integerProperty": {
+      "const": 42
+    }
+  }
+}

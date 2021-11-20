@@ -1,0 +1,75 @@
+/**
+ * Update the model with the provided data. If the update fails due to any violations an exception will be thrown and
+ * no properties of the model will be updated.
+ *
+ * @param array $modelData May contain any subset of the models properties
+ *
+ * @return self
+ *
+ * @throws {% if generatorConfiguration.collectErrors() %}{{ viewHelper.getSimpleClassName(generatorConfiguration.getErrorRegistryClass()) }}{% else %}ValidationException{% endif %}
+ */
+public function populate(array $modelData): self
+{
+    $rollbackValues = [];
+
+    {% if generatorConfiguration.collectErrors() %}
+        $this->_errorRegistry = new {{ viewHelper.getSimpleClassName(generatorConfiguration.getErrorRegistryClass()) }}();
+    {% else %}
+        try {
+    {% endif %}
+
+    foreach (['_additionalProperties', '_patternProperties'] as $property) {
+        if (isset($this->{$property})) {
+            $rollbackValues[$property] = $this->{$property};
+        }
+    }
+
+    {% if schema.getBaseValidators() %}
+        $this->executeBaseValidators($modelData);
+    {% endif %}
+
+    {% foreach schema.getProperties() as property %}
+        {% if not property.isInternal() %}
+            if (array_key_exists('{{ property.getName() }}', $modelData) &&
+                $modelData['{{ property.getName() }}'] !== $this->{{ property.getAttribute() }}
+            ) {
+                {{ schemaHookResolver.resolveSetterBeforeValidationHook(property, true) }}
+
+                $rollbackValues['{{ property.getAttribute() }}'] = $this->{{ property.getAttribute() }};
+                $this->process{{ viewHelper.ucfirst(property.getAttribute()) }}($modelData);
+            }
+        {% endif %}
+    {% endforeach %}
+
+    {% if generatorConfiguration.collectErrors() %}
+        if (count($this->_errorRegistry->getErrors())) {
+            foreach ($rollbackValues as $property => $value) {
+                $this->{$property} = $value;
+            }
+
+            throw $this->_errorRegistry;
+        }
+    {% else %}
+        } catch (ValidationException $exception) {
+            foreach ($rollbackValues as $property => $value) {
+                $this->{$property} = $value;
+            }
+
+            throw $exception;
+        }
+    {% endif %}
+
+    $this->_rawModelDataInput = array_merge($this->_rawModelDataInput, $modelData);
+
+    {% foreach schema.getProperties() as property %}
+        {% if not property.isInternal() %}
+            {% if schemaHookResolver.resolveSetterAfterValidationHook(property) %}
+                if (array_key_exists('{{ property.getName() }}', $rollbackValues)) {
+                    {{ schemaHookResolver.resolveSetterAfterValidationHook(property, true) }}
+                }
+            {% endif %}
+        {% endif %}
+    {% endforeach %}
+
+    return $this;
+}

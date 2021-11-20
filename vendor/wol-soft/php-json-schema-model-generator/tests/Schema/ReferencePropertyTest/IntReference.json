@@ -1,0 +1,16 @@
+{
+  "definitions": {
+    "yearBetween1900and2000": {
+      "$id": "#yearBetween1900and2000",
+      "type": "integer",
+      "minimum": 1900,
+      "maximum": 2000
+    }
+  },
+  "type": "object",
+  "properties": {
+    "year": {
+      "$ref": "%s"
+    }
+  }
+}

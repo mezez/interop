@@ -1,0 +1,89 @@
+{%if onlyForDefinedValues %}
+    $value !== null &&
+{% endif %}
+(function (&$value) use (
+    &$modelData,
+    &$ifException,
+    &$thenException,
+    &$elseException
+) {
+    $originalModelData = $value;
+    {% if generatorConfiguration.collectErrors() %}
+        $originalErrorRegistry = $this->_errorRegistry;
+        $this->_errorRegistry = new {{ viewHelper.getSimpleClassName(generatorConfiguration.getErrorRegistryClass()) }}();
+    {% endif %}
+
+    try {
+        {{ viewHelper.resolvePropertyDecorator(ifProperty) }}
+
+        {% foreach ifProperty.getOrderedValidators() as validator %}
+            {{ validator.getValidatorSetUp() }}
+            if ({{ validator.getCheck() }}) {
+                {{ viewHelper.validationError(validator) }}
+            }
+        {% endforeach %}
+
+        {% if generatorConfiguration.collectErrors() %}
+            if ($this->_errorRegistry->getErrors()) {
+                throw $this->_errorRegistry;
+            }
+        {% endif %}
+    } catch (\Exception $e) {
+        $ifException = $e;
+    }
+    $value = $originalModelData;
+
+    {% if generatorConfiguration.collectErrors() %}
+        $this->_errorRegistry = new {{ viewHelper.getSimpleClassName(generatorConfiguration.getErrorRegistryClass()) }}();
+    {% endif %}
+
+    if (!$ifException) {
+        {% if thenProperty %}
+            try {
+                {{ viewHelper.resolvePropertyDecorator(thenProperty) }}
+
+                {% foreach thenProperty.getOrderedValidators() as validator %}
+                    {{ validator.getValidatorSetUp() }}
+                    if ({{ validator.getCheck() }}) {
+                        {{ viewHelper.validationError(validator) }}
+                    }
+                {% endforeach %}
+
+                {% if generatorConfiguration.collectErrors() %}
+                    if ($this->_errorRegistry->getErrors()) {
+                        throw $this->_errorRegistry;
+                    }
+                {% endif %}
+            } catch (\Exception $e) {
+                $thenException = $e;
+            }
+        {% endif %}
+    } else {
+        {% if elseProperty %}
+            try {
+                {{ viewHelper.resolvePropertyDecorator(elseProperty) }}
+
+                {% foreach elseProperty.getOrderedValidators() as validator %}
+                    {{ validator.getValidatorSetUp() }}
+                    if ({{ validator.getCheck() }}) {
+                        {{ viewHelper.validationError(validator) }}
+                    }
+                {% endforeach %}
+
+                {% if generatorConfiguration.collectErrors() %}
+                    if ($this->_errorRegistry->getErrors()) {
+                        throw $this->_errorRegistry;
+                    }
+                {% endif %}
+            } catch (\Exception $e) {
+                $elseException = $e;
+            }
+        {% endif %}
+    }
+
+    {% if generatorConfiguration.collectErrors() %}
+        $this->_errorRegistry = $originalErrorRegistry;
+    {% endif %}
+
+    return $thenException || $elseException;
+})($value)

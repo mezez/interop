@@ -17,7 +17,7 @@ function baseSixtyFourManipulation()
 
     //decoded string
     $decodedString = base64_decode($encodedString);
-    echo "Back to normal form: $decodedString</p><br>";
+    echo "<p>Back to normal form: $decodedString</p><br>";
     echo "<hr>";
 
     //base 64 image conversion
@@ -40,31 +40,6 @@ function baseSixtyFourManipulation()
     if ($convertedFileName) {
         echo "<img src='$convertedFileName'>";
     }
-
-//    //CONVERT LOCAL IMAGE BACK TO PNG FILE FROM BASE84
-//    $imageUrl = "desktop-recursion.png";
-//    //convert image to base 64
-//
-//    //PLEASE USER PHP 7.* AND BELOW, PATH INFO IS DISABLED IN PHP 8
-//    $type = pathinfo($imageUrl, PATHINFO_EXTENSION);
-//    $data = file_get_contents($imageUrl);
-//    $base64Img = 'data:image/' . $type . ';base64,' . base64_encode($data);
-//
-//
-//    echo "<p>IMAGE CONVERSION<br>Original Image: {$imageUrl} (Check primitive_types folder to view image)</p>";
-//    echo "<p>Base 64 image:</p>";
-//    var_dump($base64Img);
-//    echo "<p></p>";
-//
-//
-//    //convert back to image url
-//    $typeInLowerCase = strtolower($type);
-//    $convertedFileName = "convertedLocalImage.{$typeInLowerCase}";
-//    file_put_contents($convertedFileName, file_get_contents($base64Img));
-//
-//    echo "<p>Converted Image (Check primitive_types folder to view image):</p>";
-//    echo $convertedFileName;
-//    echo "<p></p>";
 
 }
 

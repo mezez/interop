@@ -1,8 +1,8 @@
 xml source https://ci.mines-stetienne.fr/cps2/interop/musicbrainz.joplin.xml
-tested and validated at http://xpather.com/
+TESTED AND VALIDATED at http://xpather.com/
 
 What is the artist id?
-/metadata[@xmlns="http://musicbrainz.org/ns/mmd-2.0#"]/release[@id="8833af60-0cc8-33ba-8cca-932addea42c5"]/artist-credit/name-credit/artist[@id="76c9a186-75bd-436a-85c0-823e3efddb7f"]@id
+/metadata[@xmlns="http://musicbrainz.org/ns/mmd-2.0#"]/release[@id="8833af60-0cc8-33ba-8cca-932addea42c5"]/artist-credit/name-credit/artist[@id="76c9a186-75bd-436a-85c0-823e3efddb7f"][1]/@id
 
 What is the duration of the track Summertime ?
 /metadata[@xmlns="http://musicbrainz.org/ns/mmd-2.0#"]/release[@id="8833af60-0cc8-33ba-8cca-932addea42c5"]/medium-list[@count="1"]/medium/track-list[@count="10"]/track[2]/recording[@id="e1ea2217-9a4c-4df5-8fd8-293269cb2181"]/length/text()
@@ -11,3 +11,5 @@ What is the duration of the longest track?
 /metadata[@xmlns="http://musicbrainz.org/ns/mmd-2.0#"]/release[@id="8833af60-0cc8-33ba-8cca-932addea42c5"]/medium-list[@count="1"]/medium/track-list[@count="10"]/track[10]/recording[@id="6b166b7c-b007-410f-90f0-f5b920d86354"]/length/text()
 
 What is the total duration of the album?
+
+What are the names of the tracks that were first released before 01/01/1970 ? (tip: use the xs:date casting function and filter out using the lt operator in XPath 2.0)
