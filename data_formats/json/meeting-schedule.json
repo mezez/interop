@@ -4,23 +4,26 @@
     {
       "jour": "lundi 27 sept",
       "salles": [
-        { "name": "salle 300 VP provisoire (12 places)", "info": [] },
-        { "name": "salle 322 (12 places)", "info": [] },
+        { "salle": "300 VP provisoire (12 places)", "info": [] },
+        { "salle": "322 (12 places)", "info": [] },
         {
-          "name": "salle 418(12 places)",
+          "salle": "418(12 places)",
           "info": [
             {
-              "duration": "09:00 a 10:00",
+              "start": "09:00",
+              "end": "10:00",
               "status": "Reservee",
               "course": "Soutenance master"
             },
             {
-              "duration": "10:30 a 12:00",
+              "start": "10:30",
+              "end": "12:00",
               "status": "Reservee",
               "course": "Reunion preparation CIRPe 2021"
             },
             {
-              "duration": "16:00 a 17:30",
+              "start": "16:00",
+              "end": "17:30",
               "status": "Reservee",
               "course": "Soutenance stage Kevin AROCA"
             }
@@ -32,50 +35,57 @@
       "jour": "mardi 28 sept",
       "salles": [
         {
-          "name": "salle 300 VP provisoire (12 places)",
+          "salle": "300 VP provisoire (12 places)",
           "info": [
             {
-              "duration": "11:30 a 13:00",
+              "start": "11:30",
+              "end": "13:00",
               "status": "Reservee",
               "course": "Reunion suivi de these"
             },
             {
-              "duration": "14:00 a 16:00",
+              "start": "14:00",
+              "end": "16:00",
               "status": "Reservee",
               "course": "PhD Meeting"
             }
           ]
         },
         {
-          "name": "salle 322 (12 places)",
+          "salle": "322 (12 places)",
           "info": [
             {
-              "duration": "14:00 a 16:30",
+              "start": "14:00",
+              "end": "16:30",
               "status": "Reservee",
               "course": "Reunion these Camilo"
             }
           ]
         },
         {
-          "name": "salle 418(12 places)",
+          "salle": "418(12 places)",
           "info": [
             {
-              "duration": "09:00 a 10:30",
+              "start": "09:00",
+              "end": "10:30",
               "status": "Reservee",
               "course": "Presentation Territoire DPI"
             },
             {
-              "duration": "11:00 a 12:00",
+              "start": "11:00",
+              "end": "12:00",
               "status": "Reservee",
               "course": "Soutenance TFE Ghaziane"
             },
             {
-              "duration": "14:00 a 16:00",
+              "start": "14:00",
+              "end": "16:00",
               "status": "Reservee",
               "course": "Reunion SobriT"
             },
             {
-              "duration": "16:00 a 17:00",
+              "start": "16:00",
+              "end": "17:00",
               "status": "Reservee",
               "course": "Reunion ProTech (SIRAM IT'm)"
             }
@@ -87,34 +97,38 @@
       "jour": "mercredi 29 sept",
       "salles": [
         {
-          "name": "salle 300 VP provisoire (12 places)",
+          "salle": "300 VP provisoire (12 places)",
           "info": [
             {
-              "duration": "15:30 a 18:50",
+              "start": "15:30",
+              "end": "18:50",
               "status": "Reservee",
               "course": "Reunion SOS Mediterranee"
             }
           ]
         },
         {
-          "name": "salle 322 (12 places)",
+          "salle": "322 (12 places)",
           "info": []
         },
         {
-          "name": "salle 418(12 places)",
+          "salle": "418(12 places)",
           "info": [
             {
-              "duration": "11:00 a 12:30",
+              "start": "11:00",
+              "end": "12:30",
               "status": "Reservee",
               "course": "Reunion de projet SIRAM"
             },
             {
-              "duration": "14:00 a 16:30",
+              "start": "14:00",
+              "end": "16:30",
               "status": "Reservee",
               "course": "DIR FAYOL"
             },
             {
-              "duration": "17:00 a 18:00",
+              "duration": "17:00",
+              "duration": "18:00",
               "status": "Reservee",
               "course": "TFE Thomas SOLANAS"
             }
@@ -126,15 +140,15 @@
       "jour": "jeudi 30 sept",
       "salles": [
         {
-          "name": "salle 300 provisoire (12 places)",
+          "salle": "300 provisoire (12 places)",
           "info": []
         },
         {
-          "name": "salle 322 (12 places)",
+          "salle": "322 (12 places)",
           "info": []
         },
         {
-          "name": "salle 418(12 places)",
+          "salle": "418(12 places)",
           "info": []
         }
       ]

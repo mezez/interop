@@ -11,128 +11,126 @@ function dateAndTimeManipulation(){
     date_default_timezone_set('Europe/Paris');
 
     $date = new DateTime('now');//get current date time string
-    echo "<p>current date time string</p>";
-    var_dump($date);
-    echo "<p></p>";
-    $date2020 = new DateTime("2020-10-14"); //get date time for 2020-1--14 y-m-d format
+    $date =  $date->format('d/m/Y');
+    echo "<p><b>Current date:</b> $date</p>";
+    echo "<hr>";
 
-    echo "<p>date time for 2020-1-14 y-m-d format</p>";
+    $date = new DateTime('now');//get current date time object
+    echo "<p><b>Current date time object:</b></p>";
+    var_dump($date);
+    echo "<hr>";
+
+
+    $date2020 = new DateTime("2020-10-14"); //get date time for 2020-1-14 y-m-d format
+    echo "<p><b>Date time object for 2020-1-14 y-m-d format</b></p>";
     var_dump($date2020);
-    echo "<p></p>";
+    echo "<hr>";
 
 
     //convert today's date to timestamps
     $todayInTimestamps = $date->getTimestamp();
-
-    echo "<p>today's date to timestamps </p>";
-    var_dump($todayInTimestamps);
-    echo "<p></p>";
+    echo "<p><b>Today's date in timestamps:</b> $todayInTimestamps</p>";
+    echo "<hr>";
 
 
     //add one day to the $todayInTimestamps
-    $tomorrowInTimestamps  = $todayInTimestamps + (24 * 60 * 60 * 1000);
+    $tomorrowInTimestamps  = strtotime('+1 day', $todayInTimestamps);
 
-    echo "<p>add one day to the $todayInTimestamps</p>";
-    var_dump($tomorrowInTimestamps);
-    echo "<p></p>";
+    echo "<p><b>Add one day to the $todayInTimestamps: $tomorrowInTimestamps</b></p>";
+    echo "<hr>";
 
 
     $tomorrowDateString = Date('d-m-Y',$tomorrowInTimestamps);
-    echo "<p>Tomorrow date string</p>";
-    var_dump($tomorrowDateString);
-    echo "<p></p>";
+    echo "<p><b>Tomorrow's date string:</b> $tomorrowDateString</p>";
+    echo "<hr>";
 
 
     //convert today's date to d-m-Y format
     $newDate = date("d-m-Y", $todayInTimestamps);
 
-    echo "<p>convert today's date to d-m-Y format</p>";
-    var_dump($newDate);
-    echo "<p></p>";
+    echo "<p><b>convert today's date to d-m-Y format: </b>$newDate</p>";
+    echo "<hr>";
 
 
     $year = $date->format('Y');
-    echo "<p>Current Year:</p>";
-    var_dump($year);
-    echo "<p></p>";
+    echo "<p><b>Current Year: </b>$year</p>";
+    echo "<hr>";
 
     $month = $date->format('m');
-    echo "<p>Month:</p>";
-    var_dump($month);
-    echo "<p></p>";
+    echo "<p><b>Month: </b>$month</p>";
+    echo "<hr>";
 
     $day = $date->format('d');
-    echo "<p>Day</p>";
-    var_dump($day);
-    echo "<p></p>";
+    echo "<p><b>Day: </b>$day</p>";
+    echo "<hr>";
 
 
     //CHANGE TIMEZONE TO AMERICA
     date_default_timezone_set('America/New_York');
     $date = new DateTime();
 
-    echo "<p>change timezone to america new york</p>";
+    echo "<p><b>Change timezone to america new york: </b></p>";
     var_dump($date);
     echo "<p></p>";
 
 
 }
 
-function baseSixtyFourManipulation(){
-    echo "<p>BASE64 MANIPULATION</p><hr>";
-
-    $string = "Base 64 string to be encoded";
-        echo $string . "<p> :Normal Form </p>";
-
-    //base64 encoded string
-    $encodedString = base64_encode($string);
-        echo  $encodedString."<p> : Encoded in base 64</p>";
-
-    //decoded string
-    $decodedString = base64_decode($encodedString);
-        echo $decodedString." : Back to normal form</p><br>";
-
-    //base 64 image conversion
-
-
-    //BASE64 IMAGE FROM MAXIME; base64.txt file
-    $base64ImgFromMaxime = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAgCAYAAACowdDWAAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7OHOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAABJ0AAASdAHeZh94AAAAFXRFWHRDcmVhdGlvbiBUaW1lADQvMDEvMTfS48XeAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAChRJREFUWEfNmQlYjWkbx//tSdkqS5qxhT4imkakxfKNJSI1fFPWjLHE2NfCZCtjbA3Zt7EUY0nFZKJlyFrKkmhatBAppX09vXM/z3mTEjrhu+bnOlfn3M953/Pez3Pv5AQC/3JKCsshJw8oqyqKkrohKa8A044u/bywPSwtLkdhXil/sfeycGrTbfh63n1LwYoKAVFBKUhPyhUl1Um8l4lniblQVJLHZzlJ9gCXT8Xxh0h9mI20hFfIel4AOTk5NG2hhnbdtaDdWh2dTVrCzFYPjTUbiFdKYSfgv+MuTm2Jgl5PbbiesRZXpNw8/xh+tD5sWjeYjuggSqUUF5ThyKobMBr4Jb4a3IbLPqmSRfml8Fp3CwH7ounOcmjXTRNdTFvRX210NGoORUV5vEjNw77FYXj2OEc8ZQnM7PSw6MAgZKTm4vzuaFw4FIOivBLo92qFny/aincHoi6lYN+yq5BIKvBzoC0aa1XfnDMeUYik78z0sESr9k1E6SdUMiIwGTvnhuI5mc8QRwOMmm0I3c7NxNUqdi+8jCun41FeKkEZvQY66GO8a28E7I1GwP5o5L8q4d/To01xDxjF3/99Ox3HaPNu0Qka0+ms9hsBOfpXycMbz7Bn8RVo66pjwf5voNJASVyR8kmU3Dn/Mvy23UHLDo2w9pwNWutV7WIlsRHp+NUpGKmPsqBE/sXMbPomczRsrILNP1zE5ZNxUGukzP2WmdrKU8ORcDcDe+nhY64/4748fZMFbH7sKd4RyE4vxA7a2DDatGl8rYe4Up2PVvIw2f9x93CYDGsLZy8rKKkoiCtVXDjwAPuXhoH9kIG5Dib+1If7ZdbzQriO8qfgkcP9WIv81GZODxiY6pByYYgNf45y8k/VhkqYst4MlqM78fuVl0nI724ikMxaQVEOq86OQIce2nytNj5KSWZennNC0ZGCw8aQMfwHa+LhFATfnXfxH+OWfLe7W+hyecKdDLja+nPzlEgEjFlghHEre+NFSi7m9P2dhWVKG3J0T3ksPToUXcm3Gdf9E/Hbyut4fD+T/F0Hbn+MRAN1Zb72LuqtZBz5yZLBPlBQkIN36hQoKlc/waQHWZhr6g1dfU2M/8kEJlbtxBXA2/0Wjqy+CTUNZfS374xJa0zRkEw16NgjbJ8Vws1WnhTU0FTFjggHfk1seDq2zQpG8oOXPC2MWWQMe+defO1D1FtJZ6uziLmWxh+wpi/477qH33+JwFhnE/x3gj49VNUGbJl6CcFej2DYXxffu5lR5NXi8uPrw3FmSyQ36SbN1XikVlRRxO5IB+xaeAU3/BKkpqumBMe1phhAAauu1EvJJNrNGUbH0LarJn69/t1rPywrkWD9hAvQI38bvfhrvuOVFOSWYNkQHxTmlMJpqyWMvpHmMMYBSgvepGSjZioY7mQIR9q4DRP/xO2LyfxEKyoo91LaYMo7ew19vTF1hikpK5umBAojGnkKJzdG8M8VFDUo4QtebjeF4oJSLnuT+5efCE69vIRze+6JEinsu85WPsIwtW3CjnmhQl5WsbgiCBR0BFvNncL4DgeE0S12C+vs/xBXZEdmJSlQCLP7ePMHe5qQzWWSconwKqOQv69JsNdD4ejam3RdlQKM3KwiwcnYS1g65IxAeU6UVkGVizDV8Ihgp72Lb97HILOST/7OEkY33yX8YHBYKC0pF6W1k/EkT8h4mid+quLBtTRhpY2vEBmULEpqx31cgGCtsV0IPRErSuqHzAU6q2iKCsqhRdXFmz5XGyzvaemoi5+k0ImSf5bC9bQ1eg74UpTWTvMvNFh1iNTYLFFSP2RWMiezmP8wK7RZwS0LZDe85PqaSjOWAz8I3V9eXh5p8TmioH7I3mqJwZgl6brC0gG7itWbtVVE74NvjJpsfWRNZFZSm0yIzBxZzwr4A7yPzKf58HK7xU+t5rmxAp3d532w9Qqqhlq0aSRK6ofMSup2aopGVIk8TciBpIQS2DtgPR3LdaNm9+AJ/E3C/0xC+IWkD5o760MFqml1ain4ZUFmJc9RNcMOgDXBqfHZorSKEO9YjGu3HynUbWy4ZFetrnyemAM3hwDkZ5egT41ml51sfNQLlFDTy2DNbyLVtw2oONfv1ZLL6otMSrrTA/pRsc38UZX8JMQrVlwBkh9mYZXdOVDYR18bPbh4W4krUg6tuIZlVj4YOcsQ/b/rLEqlJN7LwJE1N3nbpUJKMVh79TKtAO0NtdGsVUMuqy91KutYX7d+7AVkvyjkn1lzmpNZBI2mqlhyZDDOUi/514k4lFDPN9OjH6xndOffYwT+FkPN9F9o06UZ1p4fCfUmquIKkJ6ci4PLr/FCfObWfqJUyooRfrgTksJ7yGFTq+5XHz6oZOjxWOxdcgUlRRIyPSUMmtQF46kl+sUxkI8alFUVeKOrRF3IeNc+GDq5K7/ufthT7KJmOoVOuN+YTrxjrySf6lefrZEIPByDGZstYTqyuulGkM9umBgI5QaKOPp4siitP+9V8hD1bT4eUbw4NjBvjbm7BvJIx5rWeeYneWfOLi/IKYHLcSvKf23JxPKxZ9EVXlwX5ZXBgTqRsSuqWiLWg3qtC+cjxk2h35JVaIgrVUzUO4hXZClzdw9E//9VN+36UKuSVCjzjoH1jAbmupi60RydjVvwtau+CfCYHsSrHRbe2XDK87YDT/IHl1/lUzTmW6zPXHXWGvom0maXzXWYX7LqxcGlFyatNuXymrgMO4uo4BSMnm8Mx3W1f0dW3lKSDYVcKYCokBnaL+uFoVMMxBVw3/N2D+cFgTwp0aVPK9oAC4QHJMPX8w5yafdZTmzaUg0u1BKxQVZcZDqOUYN8J/QJVMncmXlakvnWhA21PKYFIeRELAY7dsVszwHiysdTTcnDrtf5SHHUnJ743t2sWm3q+WMIRdZ7UG2oiG4WutTz9UGHHs2xneQXybfUKQgV5ZehKym+xn8kN+mt9NBsRsqGUK07NsXCA4PQnnrNmqTGZsN9bACS7mfCYnRHPu74lHAl814WYzN17BJ6sFm0g6wwroRF0fkWJ3le7G3dHmMWfvW6aV0/7gJP7MxkFSjwDLDvBLt5Rji9JYpHVZbsWRlnZssmc5b8mkqYn7M5D9u4YMqtzSliT3Yzg7mdnviNT4dc8oOXwgGXqxgwTh8Wdh1FsRQ2LVs+3Bdd++pg7HITPiCuhEXXsNNxfLxo8W1HjJhpyCcFtwKS4Dk7hEdcVswpk5JsAqfbqRkkEglePilAPCnHZjUs8ioqy8N6WnfYLTDivvw5kDu3+65QWx6irh/RYWmYQGmh5rjPzT6An6ANJXab2T3fmmQzHkdn4hoFqZSH2UiJeckjMYMNqVq00UBbAy30GPBFtQHX5+KtwMNqxTCfeF6I11ZOHaRTZy0QO1mWI+sC+78N9mKwgPXmYOv/wVtKsoDxrodg9SRbf7Nq+fcD/AOH3n4EHWtyAgAAAABJRU5ErkJggg==";
-
-    //CONVERT IMAGE FROM MAXIME TO PNG FILE FROM BASE84
-    echo "<p>IMAGE CONVERSION (FROM MAXIME). Check primitive_types folder to view image<br></p>";
-
-    //convert back to image url
-    $convertedFileName = "convertedImageFromMaxime.png";
-    file_put_contents($convertedFileName, file_get_contents($base64ImgFromMaxime));
-
-    echo "<p>Converted Image From maxim(Check primitive_types folder to view image):</p>";
-    var_dump($convertedFileName);
-    echo "<p></p>";
-
-    //CONVERT LOCAL IMAGE BACK TO PNG FILE FROM BASE84
-    $imageUrl = "desktop-recursion.png";
-    //convert image to base 64
-
-    //PLEASE USER PHP 7.* AND BELOW, PATH INFO IS DISABLED IN PHP 8
-    $type = pathinfo($imageUrl, PATHINFO_EXTENSION);
-    $data = file_get_contents($imageUrl);
-    $base64Img = 'data:image/' . $type . ';base64,' . base64_encode($data);
-
-
-    echo "<p>IMAGE CONVERSION<br>Original Image: {$imageUrl} (Check primitive_types folder to view image)</p>";
-    echo "<p>Base 64 image:</p>";
-    var_dump($base64Img);
-    echo "<p></p>";
-
-
-    //convert back to image url
-    $typeInLowerCase = strtolower($type);
-    $convertedFileName = "convertedLocalImage.{$typeInLowerCase}";
-    file_put_contents($convertedFileName, file_get_contents($base64Img));
-
-    echo "<p>Converted Image (Check primitive_types folder to view image):</p>";
-    var_dump($convertedFileName);
-    echo "<p></p>";
-
-}
+//function baseSixtyFourManipulation(){
+//    echo "<p>BASE64 MANIPULATION</p><hr>";
+//
+//    $string = "Base 64 string to be encoded";
+//        echo $string . "<p> :Normal Form </p>";
+//
+//    //base64 encoded string
+//    $encodedString = base64_encode($string);
+//        echo  $encodedString."<p> : Encoded in base 64</p>";
+//
+//    //decoded string
+//    $decodedString = base64_decode($encodedString);
+//        echo $decodedString." : Back to normal form</p><br>";
+//
+//    //base 64 image conversion
+//
+//
+//    //BASE64 IMAGE FROM MAXIME; base64.txt file
+//    $base64ImgFromMaxime = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAAgCAYAAACowdDWAAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7OHOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAABJ0AAASdAHeZh94AAAAFXRFWHRDcmVhdGlvbiBUaW1lADQvMDEvMTfS48XeAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAChRJREFUWEfNmQlYjWkbx//tSdkqS5qxhT4imkakxfKNJSI1fFPWjLHE2NfCZCtjbA3Zt7EUY0nFZKJlyFrKkmhatBAppX09vXM/z3mTEjrhu+bnOlfn3M953/Pez3Pv5AQC/3JKCsshJw8oqyqKkrohKa8A044u/bywPSwtLkdhXil/sfeycGrTbfh63n1LwYoKAVFBKUhPyhUl1Um8l4lniblQVJLHZzlJ9gCXT8Xxh0h9mI20hFfIel4AOTk5NG2hhnbdtaDdWh2dTVrCzFYPjTUbiFdKYSfgv+MuTm2Jgl5PbbiesRZXpNw8/xh+tD5sWjeYjuggSqUUF5ThyKobMBr4Jb4a3IbLPqmSRfml8Fp3CwH7ounOcmjXTRNdTFvRX210NGoORUV5vEjNw77FYXj2OEc8ZQnM7PSw6MAgZKTm4vzuaFw4FIOivBLo92qFny/aincHoi6lYN+yq5BIKvBzoC0aa1XfnDMeUYik78z0sESr9k1E6SdUMiIwGTvnhuI5mc8QRwOMmm0I3c7NxNUqdi+8jCun41FeKkEZvQY66GO8a28E7I1GwP5o5L8q4d/To01xDxjF3/99Ox3HaPNu0Qka0+ms9hsBOfpXycMbz7Bn8RVo66pjwf5voNJASVyR8kmU3Dn/Mvy23UHLDo2w9pwNWutV7WIlsRHp+NUpGKmPsqBE/sXMbPomczRsrILNP1zE5ZNxUGukzP2WmdrKU8ORcDcDe+nhY64/4748fZMFbH7sKd4RyE4vxA7a2DDatGl8rYe4Up2PVvIw2f9x93CYDGsLZy8rKKkoiCtVXDjwAPuXhoH9kIG5Dib+1If7ZdbzQriO8qfgkcP9WIv81GZODxiY6pByYYgNf45y8k/VhkqYst4MlqM78fuVl0nI724ikMxaQVEOq86OQIce2nytNj5KSWZennNC0ZGCw8aQMfwHa+LhFATfnXfxH+OWfLe7W+hyecKdDLja+nPzlEgEjFlghHEre+NFSi7m9P2dhWVKG3J0T3ksPToUXcm3Gdf9E/Hbyut4fD+T/F0Hbn+MRAN1Zb72LuqtZBz5yZLBPlBQkIN36hQoKlc/waQHWZhr6g1dfU2M/8kEJlbtxBXA2/0Wjqy+CTUNZfS374xJa0zRkEw16NgjbJ8Vws1WnhTU0FTFjggHfk1seDq2zQpG8oOXPC2MWWQMe+defO1D1FtJZ6uziLmWxh+wpi/477qH33+JwFhnE/x3gj49VNUGbJl6CcFej2DYXxffu5lR5NXi8uPrw3FmSyQ36SbN1XikVlRRxO5IB+xaeAU3/BKkpqumBMe1phhAAauu1EvJJNrNGUbH0LarJn69/t1rPywrkWD9hAvQI38bvfhrvuOVFOSWYNkQHxTmlMJpqyWMvpHmMMYBSgvepGSjZioY7mQIR9q4DRP/xO2LyfxEKyoo91LaYMo7ew19vTF1hikpK5umBAojGnkKJzdG8M8VFDUo4QtebjeF4oJSLnuT+5efCE69vIRze+6JEinsu85WPsIwtW3CjnmhQl5WsbgiCBR0BFvNncL4DgeE0S12C+vs/xBXZEdmJSlQCLP7ePMHe5qQzWWSconwKqOQv69JsNdD4ejam3RdlQKM3KwiwcnYS1g65IxAeU6UVkGVizDV8Ihgp72Lb97HILOST/7OEkY33yX8YHBYKC0pF6W1k/EkT8h4mid+quLBtTRhpY2vEBmULEpqx31cgGCtsV0IPRErSuqHzAU6q2iKCsqhRdXFmz5XGyzvaemoi5+k0ImSf5bC9bQ1eg74UpTWTvMvNFh1iNTYLFFSP2RWMiezmP8wK7RZwS0LZDe85PqaSjOWAz8I3V9eXh5p8TmioH7I3mqJwZgl6brC0gG7itWbtVVE74NvjJpsfWRNZFZSm0yIzBxZzwr4A7yPzKf58HK7xU+t5rmxAp3d532w9Qqqhlq0aSRK6ofMSup2aopGVIk8TciBpIQS2DtgPR3LdaNm9+AJ/E3C/0xC+IWkD5o760MFqml1ain4ZUFmJc9RNcMOgDXBqfHZorSKEO9YjGu3HynUbWy4ZFetrnyemAM3hwDkZ5egT41ml51sfNQLlFDTy2DNbyLVtw2oONfv1ZLL6otMSrrTA/pRsc38UZX8JMQrVlwBkh9mYZXdOVDYR18bPbh4W4krUg6tuIZlVj4YOcsQ/b/rLEqlJN7LwJE1N3nbpUJKMVh79TKtAO0NtdGsVUMuqy91KutYX7d+7AVkvyjkn1lzmpNZBI2mqlhyZDDOUi/514k4lFDPN9OjH6xndOffYwT+FkPN9F9o06UZ1p4fCfUmquIKkJ6ci4PLr/FCfObWfqJUyooRfrgTksJ7yGFTq+5XHz6oZOjxWOxdcgUlRRIyPSUMmtQF46kl+sUxkI8alFUVeKOrRF3IeNc+GDq5K7/ufthT7KJmOoVOuN+YTrxjrySf6lefrZEIPByDGZstYTqyuulGkM9umBgI5QaKOPp4siitP+9V8hD1bT4eUbw4NjBvjbm7BvJIx5rWeeYneWfOLi/IKYHLcSvKf23JxPKxZ9EVXlwX5ZXBgTqRsSuqWiLWg3qtC+cjxk2h35JVaIgrVUzUO4hXZClzdw9E//9VN+36UKuSVCjzjoH1jAbmupi60RydjVvwtau+CfCYHsSrHRbe2XDK87YDT/IHl1/lUzTmW6zPXHXWGvom0maXzXWYX7LqxcGlFyatNuXymrgMO4uo4BSMnm8Mx3W1f0dW3lKSDYVcKYCokBnaL+uFoVMMxBVw3/N2D+cFgTwp0aVPK9oAC4QHJMPX8w5yafdZTmzaUg0u1BKxQVZcZDqOUYN8J/QJVMncmXlakvnWhA21PKYFIeRELAY7dsVszwHiysdTTcnDrtf5SHHUnJ743t2sWm3q+WMIRdZ7UG2oiG4WutTz9UGHHs2xneQXybfUKQgV5ZehKym+xn8kN+mt9NBsRsqGUK07NsXCA4PQnnrNmqTGZsN9bACS7mfCYnRHPu74lHAl814WYzN17BJ6sFm0g6wwroRF0fkWJ3le7G3dHmMWfvW6aV0/7gJP7MxkFSjwDLDvBLt5Rji9JYpHVZbsWRlnZssmc5b8mkqYn7M5D9u4YMqtzSliT3Yzg7mdnviNT4dc8oOXwgGXqxgwTh8Wdh1FsRQ2LVs+3Bdd++pg7HITPiCuhEXXsNNxfLxo8W1HjJhpyCcFtwKS4Dk7hEdcVswpk5JsAqfbqRkkEglePilAPCnHZjUs8ioqy8N6WnfYLTDivvw5kDu3+65QWx6irh/RYWmYQGmh5rjPzT6An6ANJXab2T3fmmQzHkdn4hoFqZSH2UiJeckjMYMNqVq00UBbAy30GPBFtQHX5+KtwMNqxTCfeF6I11ZOHaRTZy0QO1mWI+sC+78N9mKwgPXmYOv/wVtKsoDxrodg9SRbf7Nq+fcD/AOH3n4EHWtyAgAAAABJRU5ErkJggg==";
+//
+//    //CONVERT IMAGE FROM MAXIME TO PNG FILE FROM BASE84
+//    echo "<p>IMAGE CONVERSION (FROM MAXIME). Check primitive_types folder to view image<br></p>";
+//
+//    //convert back to image url
+//    $convertedFileName = "convertedImageFromMaxime.png";
+//    file_put_contents($convertedFileName, file_get_contents($base64ImgFromMaxime));
+//
+//    echo "<p>Converted Image From maxim(Check primitive_types folder to view image):</p>";
+//    echo $convertedFileName;
+//    echo "<p></p>";
+//
+//    //CONVERT LOCAL IMAGE BACK TO PNG FILE FROM BASE84
+//    $imageUrl = "desktop-recursion.png";
+//    //convert image to base 64
+//
+//    //PLEASE USER PHP 7.* AND BELOW, PATH INFO IS DISABLED IN PHP 8
+//    $type = pathinfo($imageUrl, PATHINFO_EXTENSION);
+//    $data = file_get_contents($imageUrl);
+//    $base64Img = 'data:image/' . $type . ';base64,' . base64_encode($data);
+//
+//
+//    echo "<p>IMAGE CONVERSION<br>Original Image: {$imageUrl} (Check primitive_types folder to view image)</p>";
+//    echo "<p>Base 64 image:</p>";
+//    echo $base64Img;
+//    echo "<p></p>";
+//
+//
+//    //convert back to image url
+//    $typeInLowerCase = strtolower($type);
+//    $convertedFileName = "convertedLocalImage.{$typeInLowerCase}";
+//    file_put_contents($convertedFileName, file_get_contents($base64Img));
+//
+//    echo "<p>Converted Image (Check primitive_types folder to view image):</p>";
+//    echo $convertedFileName;
+//    echo "<p></p>";
+//
+//}
 ?>
