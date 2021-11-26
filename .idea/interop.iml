@@ -3,6 +3,9 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/wol-soft/php-json-schema-model-generator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/wol-soft/php-json-schema-model-generator-production" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/wol-soft/php-micro-template" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

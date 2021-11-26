@@ -2,7 +2,6 @@
 
 //date and time manipulation
 dateAndTimeManipulation();
-baseSixtyFourManipulation();
 
 
 function dateAndTimeManipulation(){

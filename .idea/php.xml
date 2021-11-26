@@ -3,6 +3,9 @@
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/wol-soft/php-micro-template" />
+      <path value="$PROJECT_DIR$/vendor/wol-soft/php-json-schema-model-generator-production" />
+      <path value="$PROJECT_DIR$/vendor/wol-soft/php-json-schema-model-generator" />
     </include_path>
   </component>
 </project>

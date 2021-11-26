@@ -7,15 +7,20 @@ use Box\Spout\Common\Type;
 use Box\Spout\Writer\Style\StyleBuilder;
 use Box\Spout\Writer\Style\Color;
 
-require_once './phpoffice/phpspreadsheet/src/PhpSpreadsheet/IOFactory.php';
-require_once './phpoffice/phpspreadsheet/src/PhpSpreadsheet/Spreadsheet.php';
+require_once '../../../vendor/autoload.php';
+use PhpOffice\PhpSpreadsheet;
+
+//require_once './phpoffice/phpspreadsheet/src/PhpSpreadsheet/IOFactory.php';
+//require_once './phpoffice/phpspreadsheet/src/PhpSpreadsheet/Spreadsheet.php';
 
 parseExcelFile();
 
 function parseExcelFile()
 {
     try {
-        $reader = IOFactory::load('sample.csv');
+//        $reader = \PhpOffice\PhpSpreadsheet\IOFactory::load('sample.csv');
+        $reader = PhpSpreadsheet\IOFactory::load('sample.csv');
+//        $reader = IOFactory::load('sample.csv');
         $worksheet = $reader->getWorksheetIterator();
 
         $records = $worksheet->current()->toArray();

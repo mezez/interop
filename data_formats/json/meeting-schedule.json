@@ -2,26 +2,32 @@
   "title": "Salles de reunion-FAYOL-Toute les ressources- Du lundi 27 sept. au dimanche 03 oct.",
   "data": [
     {
-      "jour": "lundi 27 sept",
+      "jour": "27/09",
+      "format": "DD/MM",
+      "jout_txt": "Lundi",
       "salles": [
-        { "salle": "300 VP provisoire (12 places)", "info": [] },
-        { "salle": "322 (12 places)", "info": [] },
+        { "salle": "300 VP","salleType":"provisoire","places":12,"info": [] },
+        { "salle": "322 ","salleType":"","places":12, "info": [] },
         {
-          "salle": "418(12 places)",
+          "salle": "418",
+          "salleType":"","places":12,
           "info": [
             {
+              "timezone": "GMT+1",
               "start": "09:00",
               "end": "10:00",
               "status": "Reservee",
               "course": "Soutenance master"
             },
             {
+              "timezone": "GMT+1",
               "start": "10:30",
               "end": "12:00",
               "status": "Reservee",
               "course": "Reunion preparation CIRPe 2021"
             },
             {
+              "timezone": "GMT+1",
               "start": "16:00",
               "end": "17:30",
               "status": "Reservee",
@@ -32,18 +38,24 @@
       ]
     },
     {
-      "jour": "mardi 28 sept",
+      "jour": "28/09",
+      "format": "DD/MM",
+      "jout_txt": "Mardi",
       "salles": [
         {
-          "salle": "300 VP provisoire (12 places)",
+          "salle": "300 VP",
+          "salleType":"provisoire",
+          "places":12,
           "info": [
             {
+              "timezone": "GMT+1",
               "start": "11:30",
               "end": "13:00",
               "status": "Reservee",
               "course": "Reunion suivi de these"
             },
             {
+              "timezone": "GMT+1",
               "start": "14:00",
               "end": "16:00",
               "status": "Reservee",
@@ -52,9 +64,12 @@
           ]
         },
         {
-          "salle": "322 (12 places)",
+          "salle": "322",
+          "salleType":"",
+          "places":12,
           "info": [
             {
+              "timezone": "GMT+1",
               "start": "14:00",
               "end": "16:30",
               "status": "Reservee",
@@ -63,27 +78,33 @@
           ]
         },
         {
-          "salle": "418(12 places)",
+          "salle": "418",
+          "salleType":"",
+          "places":12,
           "info": [
             {
+              "timezone": "GMT+1",
               "start": "09:00",
               "end": "10:30",
               "status": "Reservee",
               "course": "Presentation Territoire DPI"
             },
             {
+              "timezone": "GMT+1",
               "start": "11:00",
               "end": "12:00",
               "status": "Reservee",
               "course": "Soutenance TFE Ghaziane"
             },
             {
+              "timezone": "GMT+1",
               "start": "14:00",
               "end": "16:00",
               "status": "Reservee",
               "course": "Reunion SobriT"
             },
             {
+              "timezone": "GMT+1",
               "start": "16:00",
               "end": "17:00",
               "status": "Reservee",
@@ -94,12 +115,17 @@
       ]
     },
     {
-      "jour": "mercredi 29 sept",
+      "jour": "29/09",
+      "format": "DD/MM",
+      "jout_txt": "Mercredi",
       "salles": [
         {
-          "salle": "300 VP provisoire (12 places)",
+          "salle": "300 VP",
+          "salleType":"provisoire",
+          "places":12,
           "info": [
             {
+              "timezone": "GMT+1",
               "start": "15:30",
               "end": "18:50",
               "status": "Reservee",
@@ -108,27 +134,34 @@
           ]
         },
         {
-          "salle": "322 (12 places)",
+          "salle": "322",
+          "salleType":"",
+          "places":12,
           "info": []
         },
         {
-          "salle": "418(12 places)",
+          "salle": "418",
+          "salleType":"",
+          "places":12,
           "info": [
             {
+              "timezone": "GMT+1",
               "start": "11:00",
               "end": "12:30",
               "status": "Reservee",
               "course": "Reunion de projet SIRAM"
             },
             {
+              "timezone": "GMT+1",
               "start": "14:00",
               "end": "16:30",
               "status": "Reservee",
               "course": "DIR FAYOL"
             },
             {
-              "duration": "17:00",
-              "duration": "18:00",
+              "timezone": "GMT+1",
+              "start": "17:00",
+              "end": "18:00",
               "status": "Reservee",
               "course": "TFE Thomas SOLANAS"
             }
@@ -137,18 +170,26 @@
       ]
     },
     {
-      "jour": "jeudi 30 sept",
+      "jour": "30/09",
+      "format": "DD/MM",
+      "jout_txt": "Jeudi",
       "salles": [
         {
-          "salle": "300 provisoire (12 places)",
+          "salle": "300",
+          "salleType":"provisoire",
+          "places":12,
           "info": []
         },
         {
-          "salle": "322 (12 places)",
+          "salle": "322",
+          "salleType":"",
+          "places":12,
           "info": []
         },
         {
-          "salle": "418(12 places)",
+          "salle": "418",
+          "salleType":"",
+          "places":12,
           "info": []
         }
       ]

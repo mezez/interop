@@ -1,6 +1,7 @@
 {
   "title": "Shangai Air Quality 10/10/2021",
-  "day": "10th October 2021",
+  "day": "10/10/2021",
+  "dateFormat": "DD/MM/YYYY",
   "indices": [
     {
       "name": "PM2.5",
