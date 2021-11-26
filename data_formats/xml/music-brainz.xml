@@ -2,9 +2,8 @@
 <musicBrain>
     <overview>
         <tracklist>
-            <Vinyl1>
-                <info>
-                    <number>A1</number>
+            <category type="Vinyl1">
+                <track id="A1">
                     <titleDetails>
                         <title>La Vie en rose</title>
                         <vocals>Nil</vocals>
@@ -20,9 +19,8 @@
                     <artist>Edith Piaf</artist>
                     <rating>Nil</rating>
                     <Length>3:02</Length>
-                </info>
-                <info>
-                    <number>A2</number>
+                </track>
+                <track id="A2">
                     <titleDetails>
                         <title>Hymne a l'amour</title>
                         <vocals>Nil</vocals>
@@ -38,9 +36,8 @@
                     <artist>Edith Piaf</artist>
                     <rating>Nil</rating>
                     <Length>3:23</Length>
-                </info>
-                <info>
-                    <number>A3</number>
+                </track>
+                <track id="A3">
                     <titleDetails>
                         <title>J'm'en fous pas mal</title>
                         <vocals>Edith Piaf</vocals>
@@ -56,9 +53,8 @@
                     <artist>Edith Piaf</artist>
                     <rating>Nil</rating>
                     <Length>2:09</Length>
-                </info>
-                <info>
-                    <number>A4</number>
+                </track>
+                <track id="A4">
                     <titleDetails>
                         <title>Johnny, tu n’es pas un ange</title>
                         <vocals>Edith Piaf</vocals>
@@ -74,9 +70,8 @@
                     <artist>Edith Piaf</artist>
                     <rating>Nil</rating>
                     <Length>3:23</Length>
-                </info>
-                <info>
-                    <number>A5</number>
+                </track>
+                <track id="A5">
                     <titleDetails>
                         <title>Bravo pour le clown !</title>
                         <vocals>Nil</vocals>
@@ -92,9 +87,8 @@
                     <artist>Edith Piaf</artist>
                     <rating>Nil</rating>
                     <Length>3:34</Length>
-                </info>
-                <info>
-                    <number>A6</number>
+                </track>
+                <track id="A6">
                     <titleDetails>
                         <title>L’Accordéoniste</title>
                         <vocals>Nil</vocals>
@@ -110,9 +104,8 @@
                     <artist>Edith Piaf</artist>
                     <rating>Nil</rating>
                     <Length>3:02</Length>
-                </info>
-                <info>
-                    <number>A7</number>
+                </track>
+                <track id="A7">
                     <titleDetails>
                         <title>L’Homme à la moto</title>
                         <vocals>Edit Piaf</vocals>
@@ -128,9 +121,8 @@
                     <artist>Edith Piaf</artist>
                     <rating>Nil</rating>
                     <Length>3:02</Length>
-                </info>
-                <info>
-                    <number>B1</number>
+                </track>
+                <track id="B1">
                     <titleDetails>
                         <title>La Foule</title>
                         <vocals>Nil</vocals>
@@ -146,9 +138,8 @@
                     <artist>Edith Piaf</artist>
                     <rating>Nil</rating>
                     <Length>2:57</Length>
-                </info>
-                <info>
-                    <number>B2</number>
+                </track>
+                <track id="B2">
                     <titleDetails>
                         <title>Mon manège a moi (Tu me fais tourner la tête)</title>
                         <vocals>Edith Piaf</vocals>
@@ -164,9 +155,8 @@
                     <artist>Edith Piaf</artist>
                     <rating>Nil</rating>
                     <Length>2:57</Length>
-                </info>
-                <info>
-                    <number>B3</number>
+                </track>
+                <track id="B3">
                     <titleDetails>
                         <title>Milord</title>
                         <vocals>Edith Piaf (on 1959-06-05)</vocals>
@@ -182,9 +172,8 @@
                     <artist>Edith Piaf</artist>
                     <rating>4 Stars</rating>
                     <Length>4:27</Length>
-                </info>
-                <info>
-                    <number>B4</number>
+                </track>
+                <track id="B4">
                     <titleDetails>
                         <title>Non, je ne regrette rien</title>
                         <vocals>Edith Piaf (on 1960-11-10)</vocals>
@@ -200,9 +189,8 @@
                     <artist>Edith Piaf</artist>
                     <rating>5 Stars</rating>
                     <Length>2:23</Length>
-                </info>
-                <info>
-                    <number>B5</number>
+                </track>
+                <track id="B5">
                     <titleDetails>
                         <title>Les Mots d’amour</title>
                         <vocals>Nil</vocals>
@@ -218,9 +206,8 @@
                     <artist>Edith Piaf</artist>
                     <rating>Nil</rating>
                     <Length>3:24</Length>
-                </info>
-                <info>
-                    <number>B6</number>
+                </track>
+                <track id="B6">
                     <titleDetails>
                         <title>Mon Dieu</title>
                         <vocals>Nil</vocals>
@@ -236,9 +223,8 @@
                     <artist>Edith Piaf</artist>
                     <rating>Nil</rating>
                     <Length>3:20</Length>
-                </info>
-                <info>
-                    <number>B7</number>
+                </track>
+                <track id="B7">
                     <titleDetails>
                         <title>À quoi ça sert l’amour</title>
                         <vocals>Édith Piaf (on 1962-09-03) and Théo Sarapo (on 1962-09-03)</vocals>
@@ -254,8 +240,8 @@
                     <artist>Edith Piaf</artist>
                     <rating>Nil</rating>
                     <Length>2:25</Length>
-                </info>
-            </Vinyl1>
+                </track>
+            </category>
         </tracklist>
         <credits>
             <release>

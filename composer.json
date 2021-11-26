@@ -3,6 +3,7 @@
         "wol-soft/php-json-schema-model-generator": "^0.21.7"
     },
     "require": {
-        "wol-soft/php-json-schema-model-generator-production": "^0.17.0"
+        "wol-soft/php-json-schema-model-generator-production": "^0.17.0",
+        "phpoffice/phpspreadsheet": "^1.20"
     }
 }

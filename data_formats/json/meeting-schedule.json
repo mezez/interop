@@ -4,7 +4,7 @@
     {
       "jour": "27/09",
       "format": "DD/MM",
-      "jout_txt": "Lundi",
+      "jour_txt": "Lundi",
       "salles": [
         { "salle": "300 VP","salleType":"provisoire","places":12,"info": [] },
         { "salle": "322 ","salleType":"","places":12, "info": [] },

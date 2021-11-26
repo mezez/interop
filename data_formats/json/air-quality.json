@@ -1,47 +1,53 @@
 {
-  "title": "Shangai Air Quality 10/10/2021",
-  "day": "10/10/2021",
+  "title": "Shangai Air Quality",
+  "date": "10/10/2021",
   "dateFormat": "DD/MM/YYYY",
+  "time": "18:00",
+  "timezone": "GMT+8",
+  "temperature": {
+    "value": "30.5",
+    "type": "centrigrade"
+  },
   "indices": [
     {
       "name": "PM2.5",
-      "value": "42"
+      "value": 42
     },
     {
       "name": "PM10",
-      "value": "40"
+      "value": 40
     },
     {
       "name": "O3",
-      "value": "24"
+      "value": 24
     },
     {
       "name": "NO2",
-      "value": "8"
+      "value": 8
     },
     {
       "name": "SO2",
-      "value": "1"
+      "value": 1
     },
     {
       "name": "CO",
-      "value": "6"
+      "value": 6
     },
     {
-      "name": "Temp",
-      "value": "31"
+      "name": "temp",
+      "value": 31
     },
     {
       "name": "Pressure",
-      "value": "1003"
+      "value": 1003
     },
     {
       "name": "Humidity",
-      "value": "73"
+      "value": 73
     },
     {
       "name": "Wind",
-      "value": "1"
+      "value": 1
     }
   ]
 }
