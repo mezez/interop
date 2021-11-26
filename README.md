@@ -9,6 +9,9 @@ For CODE IMPLEMENTATIONS
 
 On the browser
 
+Please note that the vendor packages for this project is included in the Github Repo (Though this is not a best practise, it has been done to
+prevent difficulties in installing various packages requiring different composer versions for Non PHP experts, considering the context of this project).
+
 //PRIMITIVE TYPES
 To test base64 manipulation, visit localhost/interop/primitive_types/base_64_manipulation.php
 To test date and time manipulation, visit localhost/interop/primitive_types/date_and_time.php

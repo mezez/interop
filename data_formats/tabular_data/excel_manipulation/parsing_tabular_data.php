@@ -22,6 +22,8 @@ function parseExcelFile()
         $worksheet = $reader->getWorksheetIterator();
 
         $records = $worksheet->current()->toArray();
+        echo "<p>Parsing Excel Data from sample.csv file inside the data_formats/tabular_data/excel_manipulation folder</p>";
+        echo "<hr>";
         echo "<table>";
         foreach ($records as $row):
             echo "<tr>";

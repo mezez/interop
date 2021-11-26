@@ -16,6 +16,8 @@ function writeToExcel(){
     $writer = WriterFactory::create(Type::CSV); // for CSV files
     //$writer->openToFile($fullFilePath); // write data to a file or to a PHP stream
     $fileName = "generated.csv";
+    echo "<p>Writing Data to CSV File Programmatically.</p>";
+    echo "<hr>";
     $writer->openToBrowser($fileName); // stream data directly to the browser
 
     $itemNameArray = ['S/N', 'NAME'];
