@@ -11,5 +11,6 @@ What is the duration of the longest track?
 /metadata[@xmlns="http://musicbrainz.org/ns/mmd-2.0#"]/release[@id="8833af60-0cc8-33ba-8cca-932addea42c5"]/medium-list[@count="1"]/medium/track-list[@count="10"]/track[10]/recording[@id="6b166b7c-b007-410f-90f0-f5b920d86354"]/length/text()
 
 What is the total duration of the album?
+sum(/metadata[@xmlns="http://musicbrainz.org/ns/mmd-2.0#"]/release[@id="8833af60-0cc8-33ba-8cca-932addea42c5"]/medium-list[@count=1]/medium/track-list/track/length)
 
 What are the names of the tracks that were first released before 01/01/1970 ? (tip: use the xs:date casting function and filter out using the lt operator in XPath 2.0)
