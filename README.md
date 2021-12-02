@@ -17,10 +17,10 @@ To test base64 manipulation, visit localhost/interop/primitive_types/base_64_man
 To test date and time manipulation, visit localhost/interop/primitive_types/date_and_time.php
 
 //TABULAR DATA
-To test parsing csv data from a csv file, visit localhost/interop/data_formats/tabular_data/parsing_tabular_data.php
-CSV file can be found at localhost/interop/data_formats/tabular_data/sample.csv
+To test parsing csv data from a csv file, visit http://localhost/interop/data_formats/tabular_data/excel_manipulation/parsing_tabular_data.php
+CSV file can be found at localhost/interop/data_formats/tabular_data/excel_manipulation/sample.csv
 
-To test writing data to excel file, visit localhost/interop/data_formats/tabular_data/write_to_excel.php
+To test writing data to excel file, visit localhost/interop/data_formats/tabular_data/excel_manipulation/write_to_excel.php
 This should create an excel file to download in your browser.
 
 //CREATING CLASSES FROM JSON SCHEMA
