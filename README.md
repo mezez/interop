@@ -3,15 +3,16 @@ CHIMEZIRIM VICTOR EKEMAM INTEROPERABILITY PROJECT
 For CODE IMPLEMENTATIONS
 
 -To test code, install xampp at https://www.apachefriends.org/xampp-files/7.3.31/xampp-windows-x64-7.3.31-3-VC15-installer.exe
--once installation is completed, go to xampp folder then htdocs.
+-once installation is completed, go to xampp folder then htdocs. (usually at c://xampp/htdocs)
 -clone repository into htdocs folder. If you use wampp, then clone repository into www folder. You should have the interop folder created.
--start xampp (or wamp) server, start apache.
+-search for xampp from the windows search (or it's mac equivalent)
+-start the xampp (or wamp) control panel app, then on the xampp application, start apache.
 
-On the browser
 
-Please note that the vendor packages for this project is included in the Github Repo (Though this is not a best practise, it has been done to
-prevent difficulties in installing various packages requiring different composer versions for Non PHP experts, considering the context of this project).
+[Please note that the vendor packages for this project is included in the Github Repo (Though this is not a best practise, it has been done to
+prevent difficulties in installing various packages requiring different composer versions for Non PHP experts, considering the context of this project).]
 
+ON THE BROWSER
 //PRIMITIVE TYPES
 To test base64 manipulation, visit localhost/interop/primitive_types/base_64_manipulation.php
 To test date and time manipulation, visit localhost/interop/primitive_types/date_and_time.php
@@ -26,6 +27,6 @@ This should create an excel file to download in your browser.
 //CREATING CLASSES FROM JSON SCHEMA
 To test this, visit localhost/interop/using-xml-and-json-docs-with-php/using-xml-and-json.php
 This json schema is saved at localhost/interop/using-xml-and-json-docs-with-php/schema/weather-forecast-schema.json
-The classes generated will be found atlocalhost/interop/using-xml-and-json-docs-with-php/result
+The classes generated will be found at localhost/interop/using-xml-and-json-docs-with-php/result
 
 For the rest of the modules or other parts, the folder names correspond to the required task.

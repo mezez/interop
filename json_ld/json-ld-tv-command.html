@@ -2,18 +2,20 @@
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "smartTvCommandAction",
+        "@type": "Action",
+        "name": "Turn of TV",
         "agent": {
             "@type": "Person",
-            "name": "John"
+            "givenName": "John",
+            "familyName": "Doe"
         },
         "object": {
-            "@type": "Tv",
+            "@type": "Thing",
             "name": "Samsung"
         },
-        "instruction": {
-            "@type": "Command",
-            "name": "Turn of TV"
+        "instrument": {
+            "@type": "Thing",
+            "name": "Samsung Remote"
         }
     }
 </script>
