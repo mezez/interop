@@ -16,7 +16,7 @@ paths:
       summary: Returns a list of rooms in a smart home
       description: Use this endpoint to retrieve all the rooms in a smart home
       responses:
-        '200':
+        "200":
           description: A JSON array of rooms
           content:
             application/json:
@@ -24,9 +24,9 @@ paths:
                 type: array
                 items:
                   type: string
-        '404':
+        "404":
           description: No records found
-        '500':
+        "500":
           description: Internal server error
 
   #read (GET) the resource associated to a room (the id is a URL parameter) to get the list of connected devices it contains. Focus on two types of devices: color light bulbs, and smart TVs.
@@ -35,7 +35,7 @@ paths:
       summary: Returns details about a specific room
       description: Use this endpoint with a room id to get the details of the corresponding room
       responses:
-        '200':
+        "200":
           description: A JSON object containing room information
           content:
             application/json:
@@ -43,9 +43,9 @@ paths:
                 type: object
                 items:
                   type: string
-        '404':
+        "404":
           description: No record found
-        '500':
+        "500":
           description: Internal server error
 
   #read (GET) the resource associated to a connected device (the id of the room and the id of the connected device are URL parameters) to obtain the current status of the device.
@@ -54,7 +54,7 @@ paths:
       summary: Returns info about the connected device of a specific room
       description: Use this endpoint to get the status of the connected device in a specific room using the room id and device id
       responses:
-        '200':
+        "200":
           description: A JSON object of devices status of a room
           content:
             application/json:
@@ -62,9 +62,9 @@ paths:
                 type: object
                 items:
                   type: string
-        '404':
+        "404":
           description: No record found
-        '500':
+        "500":
           description: Internal server error
 
     #update (PUT) the resource associated to a connected device (same path as before) to change the status of the device.
@@ -73,7 +73,7 @@ paths:
         summary: Change connected device status
         description: Use this endpoint to update the status of the connected device in a specific room using the room id and device id
         responses:
-          '200':
+          "200":
             description: Update success
             content:
               application/json:
@@ -81,9 +81,7 @@ paths:
                   type: object
                   items:
                     type: string
-          '404':
+          "404":
             description: No record found to update
-          '500':
+          "500":
             description: Internal server error
-
-
