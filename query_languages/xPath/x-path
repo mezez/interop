@@ -2,7 +2,7 @@ xml source https://ci.mines-stetienne.fr/cps2/interop/musicbrainz.joplin.xml
 TESTED AND VALIDATED at http://xpather.com/
 
 What is the artist id?
-/metadata[@xmlns="http://musicbrainz.org/ns/mmd-2.0#"]/release[@id="8833af60-0cc8-33ba-8cca-932addea42c5"]/artist-credit/name-credit/artist[@id="76c9a186-75bd-436a-85c0-823e3efddb7f"][1]/@id
+/metadata[@xmlns="http://musicbrainz.org/ns/mmd-2.0#"]/release[@id="8833af60-0cc8-33ba-8cca-932addea42c5"]/artist-credit/name-credit/artist/@id
 
 What is the duration of the track Summertime ?
 //metadata/release//medium/track-list/track/recording/*[text()[contains(.,'Summertime')]]/parent::*/length
