@@ -24,9 +24,15 @@ CSV file can be found at localhost/interop/data_formats/tabular_data/excel_manip
 To test writing data to excel file, visit localhost/interop/data_formats/tabular_data/excel_manipulation/write_to_excel.php
 This should create an excel file to download in your browser.
 
-//CREATING CLASSES FROM JSON SCHEMA
-To test this, visit localhost/interop/using-xml-and-json-docs-with-php/using-xml-and-json.php
-This json schema is saved at localhost/interop/using-xml-and-json-docs-with-php/schema/weather-forecast-schema.json
+//CREATING CLASSES FROM JSON SCHEMA and Regenerating Json Schema from the Classes
+To test this, visit localhost/interop/using-xml-and-json-docs-with-php/using-xml-and-json.php to generate the class
+
+This json schema of reference can be seen at localhost/interop/using-xml-and-json-docs-with-php/schema/weather-forecast-schema.json
 The classes generated will be found at localhost/interop/using-xml-and-json-docs-with-php/result
+
+To regenerate the schema from the class generated, visit http://localhost/interop/using-xml-and-json-docs-with-php/generate-schema-from-class.php
+
+To run unit test after creation of classes, from command line inside the project folder, run [vendor\bin\phpunit using-xml-and-json-docs-with-php/UnitTest.php] on the command line inside the project folder
+
 
 For the rest of the modules or other parts, the folder names correspond to the required task.
